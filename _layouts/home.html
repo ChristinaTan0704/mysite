@@ -32,12 +32,26 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Google Analytics -->
-    <script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script language="javascript">
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
         ga('create', "", "auto");
         ga('send', "pageview");
+
+        function changeImage() {
+
+        if (document.getElementById("imgClickAndChange").src == "data/moon-fill.svg") 
+        {
+            document.getElementById("imgClickAndChange").src = "data/sun-fill.svg";
+        }
+        else 
+        {
+            document.getElementById("imgClickAndChange").src = "data/moon-fill.svg";
+        }
+        }
+
+
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
 
 
 </head>
@@ -322,8 +336,9 @@
             </div>
         </div>
     </div>
-
-
+    <!-- <p>
+        <img alt=""  src="data/moon-fill.svg" id="imgClickAndChange" onclick="changeImage()"  />
+    </p> -->
     <footer class="site-footer">
         <div class="wrapper">
             <div class="footer-col-wrapper">
@@ -359,12 +374,12 @@
                     </div>
                 </div>
 
-                <div class="footer-col footer-col-2">
+                <div class="footer-col footer-col-1">
                     <h4>FOLLOW</h4>
 
                     <div class="social-links follow-links">
 
-                        <div class="social-link">
+                        <div class="social-link contact-links">
 
 
                             <img src="assets/img/icons/github.png" alt="github" />
@@ -376,7 +391,7 @@
                         </div>
 
 
-                        <div class="social-link">
+                        <div class="social-link contact-links">
 
 
                             <img src="assets/img/icons/linkedin.png" alt="linkedin" />
@@ -389,16 +404,18 @@
 
 
                     </div>
+
+
                 </div>
 
+                <div class="footer-col footer-col-1">
+                    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=dPAUQHocVQ4Rqw3diGiG2QtzMYnk9i2POihnOo5P_tg&cl=ffffff&w=a"></script>
+
+                </div>
 
             </div>
         </div>
     </footer>
-
-
-
-
 
 
 
@@ -418,6 +435,7 @@
 
     <script type="text/javascript" src="assets/js/vendor/cash-4.1.5.min.js"></script>
     <script type="text/javascript" src="assets/js/site.js"></script>
+
 
 </body>
 
